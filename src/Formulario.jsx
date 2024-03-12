@@ -19,6 +19,7 @@ const Formulario = () => {
       <MenuProp />
       <Content style={{ padding: '0 50px' }}>
         <div className="site-layout-content">
+
           <Form
             form={form}
             labelCol={{
@@ -99,10 +100,11 @@ const Formulario = () => {
               wrapperCol={{
                 offset: 6,
                 span: 16,
+                gap: 2
               }}
             >
               <Button onClick={() => navigate("/layout")} type="primary">Voltar</Button>
-              <Button type="primary" htmlType="submit">Submit</Button>
+              <Button type="primary" htmlType="submit">concluir</Button>
             </Form.Item>
           </Form>
         </div>

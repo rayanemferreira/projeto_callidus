@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Form, Input, Select, Row, Col } from 'antd';
+import { Button, Breadcrumb, Form, Input, Select, Row, Col } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import MenuProp from './MenuProp';
 import { v4 as uuidv4 } from 'uuid';
@@ -10,7 +10,7 @@ const { Option } = Select;
 
 const { Content } = Layout;
 
-const Formulario = () => {
+const Pagvisitante = () => {
   const navigate = useNavigate();
   const [form] = Form.useForm();
 
@@ -18,7 +18,21 @@ const Formulario = () => {
     <Layout>
       <MenuProp />
       <Content style={{ padding: '0 50px' }}>
-        <div className="site-layout-content">
+        <Breadcrumb
+          style={{
+            margin: '16px 0',
+          }}
+        >
+          <Breadcrumb.Item>Home/</Breadcrumb.Item>
+        </Breadcrumb>
+        <div className="site-layout-content"
+          style={{
+            display: 'flex',
+            alignitems: 'flex-end'
+          }}
+
+        >
+
           <Form
             form={form}
             labelCol={{
@@ -33,25 +47,25 @@ const Formulario = () => {
               maxWidth: 600,
             }}
           >
+
+
+            <Form.Item
+              label="Nome "
+              name="Nome "
+              rules={[
+                {
+                  required: true,
+                  message: 'Por favor, informe o código!',
+                },
+              ]}
+            >
+              <Input />
+            </Form.Item>
             <Row gutter={16}>
               <Col span={8}>
                 <Form.Item
-                  label="Codigo "
-                  name="Codigo "
-                  rules={[
-                    {
-                      required: true,
-                      message: 'Por favor, informe o código!',
-                    },
-                  ]}
-                >
-                  <Input />
-                </Form.Item>
-              </Col>
-              <Col span={8}>
-                <Form.Item
-                  label="IP"
-                  name="IP"
+                  label="CPF"
+                  name="CPF"
                   rules={[
                     {
                       required: true,
@@ -64,8 +78,8 @@ const Formulario = () => {
               </Col>
               <Col span={8}>
                 <Form.Item
-                  label="Setor"
-                  name="Setor"
+                  label="Setores Permitidos"
+                  name="Setor Permitidos"
                   rules={[
                     {
                       required: true,
@@ -80,29 +94,37 @@ const Formulario = () => {
                   </Select>
                 </Form.Item>
               </Col>
+
+              <Form.Item
+                label="Validade do Cadastro"
+                name="Validade do Cadastro"
+                rules={[
+                  {
+                    required: true,
+                    message: 'Por favor, informe o IP!',
+                  },
+                ]}
+              >
+                <Select>
+                  <Option value="1">1 dia </Option>
+                  <Option value="2">3 dias </Option>
+                  <Option value="3">7 dias </Option>
+                  <Option value="4">15 dias </Option>
+                </Select>
+              </Form.Item>
             </Row>
 
-            <Form.Item
-              label="Descrição"
-              name="description"
-              rules={[
-                {
-                  required: true,
-                  message: 'Por favor, informe a descrição!',
-                },
-              ]}
-            >
-              <Input.TextArea />
-            </Form.Item>
 
             <Form.Item
               wrapperCol={{
                 offset: 6,
                 span: 16,
+                gap: 2
+
               }}
             >
               <Button onClick={() => navigate("/layout")} type="primary">Voltar</Button>
-              <Button type="primary" htmlType="submit">Submit</Button>
+              <Button type="primary" htmlType="submit">Avançar</Button>
             </Form.Item>
           </Form>
         </div>
@@ -111,4 +133,4 @@ const Formulario = () => {
   );
 }
 
-export default Formulario;
+export default Pag;

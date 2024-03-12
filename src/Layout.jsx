@@ -27,7 +27,9 @@ const Lay = () => {
     },
     { icon: NotificationOutlined, name: "Funcionario", options: ['Cadastrar Funcionario'] },
     { icon: LaptopOutlined, name: "Setores", options: ['Adicionar setor'] },
-    { icon: UserOutlined, name: "Visitantes", options: ['Cadastrar visitante'] },
+    { icon: UserOutlined, name: "Visitantes", options: ['Cadastrar visitante'],
+    onClick: () =>
+    navigate('/visitante')},
   ].map((item, index) => {
     const key = String(index + 1);
     return {

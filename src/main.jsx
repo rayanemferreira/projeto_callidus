@@ -8,6 +8,7 @@ import Lay from './Layout.jsx'
 import { ConfigProvider } from 'antd';
 import Formulario from "./Formulario.jsx";
 import { DataProvider } from "./components/contexts/Context.jsx";
+import Visitante from "./Visitante.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,11 @@ const router = createBrowserRouter([
   {
     path: "/layout",
     element: <Lay />,
+  },
+
+  {
+    path: "/visitante",
+    element: <Visitante/>,
   },
 
 ]);
