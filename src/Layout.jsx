@@ -25,7 +25,8 @@ const Lay = () => {
       onClick: () =>
         navigate('/task')
     },
-    { icon: NotificationOutlined, name: "Funcionario", options: ['Cadastrar Funcionario'] },
+    { icon: NotificationOutlined, name: "Funcionario", options: ['Cadastrar Funcionario'],onClick: () =>
+    navigate('/cadastro-funcionario') },
     { icon: LaptopOutlined, name: "Setores", options: ['Adicionar setor'] },
     { icon: UserOutlined, name: "Visitantes", options: ['Cadastrar visitante'],
     onClick: () =>

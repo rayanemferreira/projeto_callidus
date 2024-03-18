@@ -9,6 +9,8 @@ import { ConfigProvider } from 'antd';
 import Formulario from "./Formulario.jsx";
 import { DataProvider } from "./components/contexts/Context.jsx";
 import Visitante from "./Visitante.jsx";
+import Funcionario from "./Funcionario.jsx";
+import CadastroDeFuncionario from "./CadastroDeFuncionarios.jsx";
 
 const router = createBrowserRouter([
   {
@@ -22,8 +24,17 @@ const router = createBrowserRouter([
   },
 
   {
+    path: "/funcionario",
+    element: <Funcionario />,
+  },
+
+  {
+    path: "/cadastro-funcionario",
+    element: <CadastroDeFuncionario />,
+  },
+  {
     path: "/visitante",
-    element: <Visitante/>,
+    element: <Visitante />,
   },
 
 ]);
