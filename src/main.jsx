@@ -11,6 +11,8 @@ import { DataProvider } from "./components/contexts/Context.jsx";
 import Visitante from "./Visitante.jsx";
 import Funcionario from "./Funcionario.jsx";
 import CadastroDeFuncionario from "./CadastroDeFuncionarios.jsx";
+import Setor from "./Setor.jsx";
+import CadastroSetor from "./CadastroSetor.jsx";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +37,16 @@ const router = createBrowserRouter([
   {
     path: "/visitante",
     element: <Visitante />,
+  },
+
+  {
+    path: "/cadastrosetor",
+    element: <CadastroSetor />,
+  },
+
+  {
+    path: "/setor",
+    element: <Setor />,
   },
 
 ]);
